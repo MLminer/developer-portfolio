@@ -4,12 +4,13 @@ export const skillsData = [
   'Java',
   'TensorFlow',
   'Pytorch',
-  'Kras',
+  'Keras',
   'AWS',
   'GCP',
   'Pandas',
   'Numpy',
   'Scikit-learn',
+  'Pypi'
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

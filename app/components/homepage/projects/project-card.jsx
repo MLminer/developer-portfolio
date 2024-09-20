@@ -7,7 +7,7 @@ import { FaEarthAsia } from "react-icons/fa6";
 
 function ProjectCard({ project }) {
   return (
-    <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group">
+    <div className="border border-[#1d293a] hover:border-[#464c6a] transition-all duration-500 bg-[#1b203e] rounded-lg relative group flex flex-col justify-stretch">
       <div className="h-44 lg:h-52 w-auto cursor-pointer overflow-hidden rounded-t-lg">
         <Image
           src={project.image}
@@ -26,13 +26,27 @@ function ProjectCard({ project }) {
           {project.description}
         </p>
       </div>
-      <div className="p-2 sm:p-3 flex gap-6 cursor-default m-auto justify-end">
-        <Link href={project.code}>
-          <BsGithub size={25} />
-        </Link>
-        <Link href={project.demo}>
-          <FaEarthAsia size={25} />
-        </Link>
+      <div className="p-2 sm:p-3 flex flex-wrap items-stretch gap-2 cursor-default m-auto justify-stretch">
+        {project.tools.map((item, index) => (
+          <div
+            className="border rounded-md border-yellow-400 m-auto"
+            key={index}
+          >
+            <span className="p-2">{item}</span>
+          </div>
+        ))}
+      </div>
+      <div className="p-2 sm:p-3 flex gap-6 cursor-default">
+        {project.code && (
+          <Link href={project.code}>
+            <BsGithub size={25} />
+          </Link>
+        )}
+        {project.demo && (
+          <Link href={project.demo}>
+            <FaEarthAsia size={25} />
+          </Link>
+        )}
       </div>
     </div>
   );

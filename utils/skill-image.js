@@ -73,7 +73,9 @@ import webix from '/public/svg/skills/webix.svg';
 import wolframalpha from '/public/svg/skills/wolframalpha.svg';
 import wordpress from '/public/svg/skills/wordpress.svg';
 import pandas from '/public/svg/skills/Pandas.png';
-import scikit_learn from '/public/svg/skills/scikit-learn.png';
+import scikit_learn from '/public/svg/skills/scikitlearn.svg';
+import keras from '/public/svg/skills/keras.svg'
+import pypi from '/public/svg/skills/pypi.svg'
 
 
 export const skillsImage = (skill) => {
@@ -231,8 +233,10 @@ export const skillsImage = (skill) => {
       return pandas;
     case 'scikit-learn':
       return scikit_learn;
-    case "kras":
-      return ionic;
+    case "keras":
+      return keras;
+    case 'pypi':
+      return pypi
     default:
       break;
   }
